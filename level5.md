@@ -29,6 +29,8 @@
 
 ```
 find
+cat
+
 ```
 
 ## Step-by-step solutions:
