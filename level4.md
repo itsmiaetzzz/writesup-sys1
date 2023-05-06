@@ -6,7 +6,7 @@
 
 
 
-# LEVEL 3
+# LEVEL 4
 
 ## Level Goal:
 
@@ -18,9 +18,9 @@
 |-----:|--------------------------------|
 | 2220 |  bandit.labs.overthewire.org   |
 
-| Level3 |  Password                             |
+| Level4 |  Password                             |
 |-------:|---------------------------------------|
-| Bandit3| aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG      |
+| Bandit4| 2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe      |
 
 ## Commands you may need to solve this level
 
@@ -38,17 +38,17 @@ find
 + *Log into the game* 
  Use this following code to enter the game=>
 ```
-ssh bandit2@bandit.labs.overthewire.org -p 2220
+ssh bandit4@bandit.labs.overthewire.org -p 2220
 ```
 <sub>We have to enter ssh following the host and the port which is 2220 to enter the level 2 with bandit2@host -p (port)</sub>
 
 + *Enter the password required* : 
 ```
-aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
+2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe
 ```
 <sub>We found it during the previous level</sub>
 
-+Once we entered the game we will *search the file that contains the password* for the next level that is hidden .
++Once we entered the game we will *search the only human-readable file that contains the password* for the next level in the *inhere* directory .
 
 
 <sub>
@@ -61,35 +61,56 @@ cd inhere
 ```
 
 <sub>
-After that , we will show the hidden file 
+After that , we will show the only human-readable file
 </sub>
 
 ```
-ls -a
+ls -h
 
 ```
 
 <sub>
 
-  ls -a : lists all files and directories in the current directory, including hidden files. 
+  ls -h : is used to display the file size in a human readable way
   
 </sub>
 
 ``` 
-.  ..  .hidden
-```
+-file00  -file02  -file04  -file06  -file08
+-file01  -file03  -file05  -file07  -file09
 
-``` 
-cat .hidden
 ```
 <sub>
-  cat :  concatenate files and print on the standard output
+
+  `file ./*`: provide information about each file in the directory, including the file type
+  
+</sub>
+``` 
+./-file00: data
+./-file01: data
+./-file02: data
+./-file03: data
+./-file04: data
+./-file05: data
+./-file06: data
+./-file07: ASCII text
+./-file08: data
+./-file09: Non-ISO extended-ASCII text, with no line terminators
+
+```
+```
+cat  ./-file07
+
+```
+
+<sub>
+   ./-file07 : this is the only human readable file ASCII text
   cat will show the content of the file : for this game , it will show the password for the next level
 </sub>
 
 
 ``` 
-2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe
+lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
 
 ```
 
@@ -101,7 +122,7 @@ exit
 <sub>Login to the next level to find how to beat it</sub>
 
 ```
- ssh bandit4@bandit.labs.overthewire.org -p 2220
+ ssh bandit5@bandit.labs.overthewire.org -p 2220
 
 ```
 ```
