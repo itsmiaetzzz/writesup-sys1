@@ -57,11 +57,29 @@ P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
 +Once we entered the game we will *search the file that contains the password* for the next level that is somewhere on the server .
 
 
+We will use the find to write this statement
 
+``` 
+find i -type f -user bandit7 -group bandit6 -size 33c 2>/dev/null
+``` 
 
+`find` : Initiates the search command. 
+`-type f`:Matches only regular files (excluding directories and other special file types). 
+`-user bandit7`: Matches files owned by the user bandit7.
+`-group bandit6`: Matches files owned by the group bandit6.
+`-size 33c`: Matches files with a size of 33 bytes.
+`2>/dev/null`: Redirects error messages to /dev/null to suppress any permission denied errors.
 
+``` 
+/var/lib/dpkg/info/bandit7.password
+``` 
 
+It shows us the file that correspond with the properties defined.
++We will enter this file and show the password.
 
+``` 
+ cd /var/lib/dpkg/info
+``` 
 
 ``` 
 cat  bandit7.password
