@@ -11,6 +11,7 @@
 ## Level Goal:
 
 -log into the game using SSH , go to the Level 1 page to find out how to beat Level 1.
+- search the *README* file which inculdes the password 
 
 ## Level information:
 
@@ -37,10 +38,31 @@ ssh bandit0@bandit.labs.overthewire.org -p 2220
 ```
 <sub>We have to enter ssh following the host and the port which is 2220 to enter the level 0 with bandit0@host -p (port)</sub>
 
-+ *Enter the password required : 
++ *Enter the password required* : 
 ```
 bandit0
 ```
+
++ *Search the file* : 
+```
+ ls 
+```
+<sub>ls : list the files and directories in the current directory </sub>
+```
+readme 
+```
++ *Display the content of the file* : 
+```
+cat readme
+
+```
+
+```
+
+NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL
+
+```
+
 Once we entered the game we will go to the level 1 by exit .
 + *Exit the level0 to move to the level 1 *
 ```
