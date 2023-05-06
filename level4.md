@@ -85,6 +85,7 @@ ls -h
   `file ./*`: provide information about each file in the directory, including the file type
   
 </sub>
+
 ``` 
 ./-file00: data
 ./-file01: data
@@ -98,6 +99,8 @@ ls -h
 ./-file09: Non-ISO extended-ASCII text, with no line terminators
 
 ```
+
+
 ```
 cat  ./-file07
 
