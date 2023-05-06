@@ -20,7 +20,7 @@
 
 | Level2 |  Password                             |
 |-------:|---------------------------------------|
-| Bandit2| NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL      |
+| Bandit2| rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi      |
 
 ## Commands you may need to solve this level
 
@@ -44,7 +44,7 @@ ssh bandit2@bandit.labs.overthewire.org -p 2220
 
 + *Enter the password required* : 
 ```
-NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL
+rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi
 ```
 <sub>We found it during the previous level</sub>
 
@@ -54,8 +54,11 @@ ls
 ```
 <sub>
   ls: List information about the FILEs (the current directory by default).
-  ls will show the files
+  ls will show the files :
 </sub>
+``` 
+spaces in this filename
+```
 
 ``` 
 cat 'spaces in this filename'
@@ -66,7 +69,7 @@ cat 'spaces in this filename'
 </sub>
 
 ``` 
-rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi
+aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
 
 ```
 
