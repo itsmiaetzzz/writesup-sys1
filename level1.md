@@ -54,8 +54,12 @@ ls
 ```
 <sub>
   ls: List information about the FILEs (the current directory by default).
-  ls will show the files
+  ls will show the files:
 </sub>
+
+``` 
+-
+```
 
 ``` 
 cat ./-
