@@ -54,11 +54,11 @@ We will use the commands  `cat` and `echo tr ` to write this statement
  cat data.txt 
 ```
 
-<sub>
+
  `cat`: show the the content of the file
-`data.txt`: is the file to search in.
+`data.txt` : is the file to search in.
  `tr`command-line utility for translating or deleting characters
-</sub>
+
 ```
 Gur cnffjbeq vf WIAOOSFzMjXXBC0KoSKBbJ8puQm5lIEi
 ``` 
