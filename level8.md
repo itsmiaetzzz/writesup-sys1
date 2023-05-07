@@ -21,7 +21,7 @@ The password for the next level is stored in the file *data.txt* and is the *onl
 
 | Level8 |    Password                           |
 |-------:|---------------------------------------|
-| Bandit8|                                       |
+| Bandit8|   TESKZC0XvTetK0S9xNwm25STk5iWrBvP    |
 
 ## Commands you may need to solve this level
 
@@ -40,7 +40,7 @@ ssh bandit6@bandit.labs.overthewire.org -p 2220
 
 + *Enter the password required* : 
 ```
-P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+ TESKZC0XvTetK0S9xNwm25STk5iWrBvP
 ```
 <sub>We found it during the previous level</sub>
 
