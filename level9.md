@@ -6,7 +6,7 @@
 
 
 
-# LEVEL 8
+# LEVEL 9
 
 ## Level Goal:
 
@@ -21,8 +21,8 @@ The password for the next level is stored in the file *data.txt in one of the fe
 |-----:|--------------------------------|
 | 2220 |  bandit.labs.overthewire.org   |
 
-| Level9 |    Password                           |
-|-------:|---------------------------------------|
+| Level9  |    Password                           |
+|-------: |---------------------------------------|
 | Bandit9 |  EN632PlfYiZbn3PhVK3XOGSlNInNE00tP    |
 
 ## Commands you may need to solve this level
@@ -46,25 +46,38 @@ EN632PlfYiZbn3PhVK3XOGSlNInNE00t
 ```
 <sub>We found it during the previous level</sub>
 
-+Once we entered the game we will *search the file that contains the password* for the next level 
-We will use the find to write this statement
++Once we entered the game we will *search the file that contains the password* for the next level. 
+We will use the commands  `strings` and `grep` to write this statement
 
 
 
 ``` 
- grep  data.txt
+ strings data.txt | grep "="
 
 ```
 <sub>
- `grep`: searches for lines
+ `grep`:: searches for lines contains "=".
 
-`data.txt` is the file to search in.
+`data.txt`: is the file to search in.
 
-`<(...)` is a convenient syntax that allows you to manipulate the output of a command as if it were stored in a file, without the need to create an actual file on the file system.
+`stings` : Extracts readable strings 
 </sub>
  
 ```
-
+4========== the#
+5P=GnFE
+========== password
+'DN9=5
+========== is
+$Z=_
+=TU%
+=^,T,?
+W=y
+q=W
+X=K,
+========== G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+&S=(
+nd?=
 ```
 + *Exit the level to move to the next level*
 ```
