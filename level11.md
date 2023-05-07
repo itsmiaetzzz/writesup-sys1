@@ -37,7 +37,7 @@ cat , tr
 ```
 ssh bandit11@bandit.labs.overthewire.org -p 2220
 ```
-<sub>We have to enter ssh following the host and the port which is 2220 to enter the level 10 with bandit10@host -p (port)</sub>
+<sub>We have to enter ssh following the host and the port which is 2220 to enter the level  with banditN°level@host -p (port)</sub>
 
 + *Enter the password required* : 
 ```
