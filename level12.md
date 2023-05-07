@@ -29,7 +29,10 @@ Then copy the *datafile using cp*, and *rename it using mv* (read the manpages!)
 ## Commands you may need to solve this level
 
 ```
-cat , tr 
+mv: rename a file
+cp : copy data file 
+mkdir : create a directory 
+
 ```
 
 ## Step-by-step solutions:
@@ -48,34 +51,102 @@ JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
 <sub>We found it during the previous level</sub>
 
 +Once we entered the game we will *search the file that contains the password* for the next level. 
-We will use the commands  `cat` and `echo tr ` to write this statement
+We will use the commands  `` and `echo tr ` to write this statement
 
 
-
+=> Show all the files 
 ``` 
- cat data.txt 
-```
-
-
- `cat`: show the the content of the file
-`data.txt` : is the file to search in.
- `tr`command-line utility for translating or deleting characters
+ ls -a
 
 ```
-Gur cnffjbeq vf WIAOOSFzMjXXBC0KoSKBbJ8puQm5lIEi
+```
+.  ..  .bash_logout  .bashrc  data.txt  .profile
+```
+
+=> Create a directory with mkdir 
+```
+mkdir /tmp/mialtina
 ``` 
-<sub>Now , we will find the password and apply the ROT13 </sub>
+
+=>  reverse the hexadecimal dump stored in the file data.txt and generate the corresponding binary output
+```
+xxd -r data.txt > /tmp/mialitina/file.bin
 
 ```
- echo " Gur cnffjbeq vf WIAOOSFzMjXXBC0KoSKBbJ8puQm5lIEi" | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+=> change directory 
 ```
-<sub>  
-  'A-Za-z' 'N-ZA-Mn-za-m' : rotate 13 
-
-</sub>
+cd /tmp/mialitina
+```
 
 ```
-The password is JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
+ls -a
+```
+```
+.  ..  file.bin
+```
+=>  `file` + file_name : analyzes the contents of the file.bin file and provides information about its type.
+```
+file file.bin
+```
+```
+file.bin: gzip compressed data, was "data2.bin", last modified: Sun Apr 23 18:04:23 2023, max compression, from Unix, original size modulo 2^32 581
+```
+=> `zcat` , `bzcat`:decompresses the contents of file.bin and outputs the uncompressed data to the standard output
+    `tar xO`:used to extract a single file from a tar archive and write its contents to the standard output (stdout) instead of creating a file on disk
+```
+zcat file.bin | file -
+```
+```
+/dev/stdin: bzip2 compressed data, block size = 900k
+```
+
+```
+zcat file.bin |bzcat| file -
+```
+```
+/dev/stdin: gzip compressed data, was "data4.bin", last modified
+: Sun Apr 23 18:04:23 2023, max compression, from Unix
+```
+
+```
+zcat file.bin | bzcat | zcat | file -
+```
+
+```
+/dev/stdin: POSIX tar archive (GNU)
+```
+
+
+```
+ zcat file.bin | bzcat | zcat|tar xO |tar xO |file -
+```
+```
+/dev/stdin: bzip2 compressed data, block size = 900k
+```
+
+```
+zcat file.bin | bzcat | zcat|tar xO |tar xO |bzcat   |tar xO|file -t file.bin | bzcat | zcat|tar xO |
+```
+```
+/dev/stdin: gzip compressed data, was "data9.bin", last modified: Sun Apr 23 18:04:23 2023, max compression, from Unix
+```
+
+
+```
+ zcat file.bin | bzcat | zcat | tar xO | tar xO | bzcat | tar xO | zcat | file -
+```
+```
+/dev/stdin: ASCII text
+```
+
+```
+ zcat file.bin | bzcat | zcat | tar xO | tar xO | bzcat | tar xO | zcat
+```
+```
+The password is wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw
+```
+
+
 ```
 + *Exit the level to move to the next level*
 ```
