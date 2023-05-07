@@ -28,7 +28,7 @@ The password for the next level is stored in the file *data.txt in one of the fe
 ## Commands you may need to solve this level
 
 ```
-
+strings , grep
 ```
 
 ## Step-by-step solutions:
