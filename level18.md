@@ -6,12 +6,11 @@
 
 
 
-# LEVEL 17
+# LEVEL 18
 
 ## Level Goal:
+The password for the next level is stored in a file readme in the homedirectory. Unfortunately, someone has modified .bashrc to log you out when you log in with SSH.
 
-The password for the next level is stored in a file readme in the homedirectory. 
-Unfortunately, someone has modified .bashrc to log you out when you log in with SSH.
 
 
 ## Level information:
@@ -35,15 +34,18 @@ ssh, ls, cat
 +Login :
 
  ```
- ssh bandit18@bandit.labs.overthewire.org -p 2220 ls
+ ssh bandit18@bandit.labs.overthewire.org -p 2220 
  
  ```
+ password : kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
+ 
 <sub>Instead of logging into the machine with SSH,
   we execute a command through SSH instead. 
   First, we use `ls` to make sure the readme file is in the folder then we can use `cat` to read it.</sub>
   
 
 ```
+ ssh bandit18@bandit.labs.overthewire.org -p 2220 ls
 bandit18@bandit.labs.overthewire.org's password: 
 readme
 
