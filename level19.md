@@ -9,7 +9,7 @@
 # LEVEL 19
 
 ## Level Goal:
-
+To gain access to the next level, you should use the setuid binary in the homedirectory. Execute it without arguments to find out how to use it. The password for this level can be found in the usual place (/etc/bandit_pass), after you have used the setuid binary.
 
 
 ## Level information:
@@ -20,37 +20,38 @@
 
 | Level19  |    Password                           |
 |-------:  |---------------------------------------|
-| Bandit19 |    kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd   |
+| Bandit19 |    IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x   |
 
 ## Commands you may need to solve this level
 
 ```
-ssh, ls, cat
+setuid
 ```
 
 ## Step-by-step solutions:
 
-+Login :
-
- ```
- ssh bandit18@bandit.labs.overthewire.org -p 2220 ls
- 
- ```
-<sub>Instead of logging into the machine with SSH,
-  we execute a command through SSH instead. 
-  First, we use `ls` to make sure the readme file is in the folder then we can use `cat` to read it.</sub>
-  
++Lists of the file :
 
 ```
-bandit18@bandit.labs.overthewire.org's password: 
-readme
+ls -a
+```
+```
+.  ..  .bash_logout  .bashrc  .profile  bandit20-do
+```
+ 
 
-$ ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme 
-This is a OverTheWire game server. More information on http://www.overthewire.org/wargames
++Running a command as another user  
+```
+ ./bandit20-do mia
 
-bandit18@bandit.labs.overthewire.org's password: 
-IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
- ```
+```
+```
+ ./bandit20-do cat /etc/bandit_pass/bandit20
+
+```
+```
+GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+```
 
 
 
