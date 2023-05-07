@@ -34,29 +34,22 @@ the current level to *port 30001 on localhost *.
 
 ## Step-by-step solutions:
 
-+ Find the password for bandit14* 
- Use this following code to enter the game=>
-```
-cat /etc/bandit_pass/bandit14
-```
-```
-4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
-```
-<sub>we need to submit the password to port 30000 on localhost we used `nc` to connect to localhost port 3000 and write the password.</sub>
++  I connect to the localhost server with the OpenSSL client and send the password from this level
 
 
 ```
-nc localhost 30000
-4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
-Correct!
+bandit15@bandit:~$ openssl s_client -connect localhost:30001
 BfMYroe26WYalil77FoDi9qh59eK5xNr
+Correct!
+cluFn7wTiGryunymYOu4RcffSxQluehd
 ```
-
-+Once we have  *the password* for the next level , we can continue to the next level. 
-
+<sub> The server then sends back the password for the next level. </sub>
 
 
- 
++  Once we have  *the password* for the next level , we can continue to the next level. 
+
+
+
 ```
 ==============================================
 |         N E X T      L E V E L             | ===>
