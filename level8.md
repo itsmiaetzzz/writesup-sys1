@@ -49,36 +49,28 @@ ssh bandit6@bandit.labs.overthewire.org -p 2220
 
 We will use the find to write this statement
 
-``` 
-
-``` 
 
 
 ``` 
+ grep -v -F -x -f <(sort data.txt | uniq -d) data.txt
 
-``` 
-
-It shows us the file that correspond with the properties defined.
-+We will enter this file and show the password.
-
-``` 
- cd /var/lib/dpkg/info
-``` 
-
-``` 
-cat  bandit7.password
 ```
 <sub>
-  cat :  concatenate files and print on the standard output
-  cat will show the content of the file : for this game , it will show the password for the next level
+ `grep`: searches for lines
+`-v` :inverts the match, so it shows lines that do not match.
+`-F` :treats the patterns as fixed strings, not regular expressions.
+`-x`:matches whole lines.
+`-f <(sort data.txt | uniq -d)`: specifies the file to read the patterns from, which is the sorted duplicate lines .
+`data.txt` is the file to search in.
+==========
+`sort data.txt | uniq -d`:sorts the lines in the "data.txt" file and extracts only the duplicate line.
+ `uniq -d`  :  specifies that only duplicate lines should be shown
+`<(...)` is a convenient syntax that allows you to manipulate the output of a command as if it were stored in a file, without the need to create an actual file on the file system.
 </sub>
-
-
-``` 
-
-
+ 
 ```
-
+EN632PlfYiZbn3PhVK3XOGSlNInNE00t
+```
 + *Exit the level to move to the next level*
 ```
 exit
