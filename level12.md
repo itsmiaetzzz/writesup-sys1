@@ -147,7 +147,7 @@ The password is wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw
 ```
 
 
-```
+
 + *Exit the level to move to the next level*
 ```
 exit
