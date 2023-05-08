@@ -55,7 +55,7 @@ We will use the commands  `base64` and `cat` to write this statement
 
 ```
 <sub>
- `base64 -d`: is used for decoding data that has been encoded in base64 format
+`base64 -d` : is used for decoding data that has been encoded in base64 format
   
   
 
