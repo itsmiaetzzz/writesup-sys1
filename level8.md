@@ -34,7 +34,7 @@ uniq , cat , ls
 + *Log into the game* 
  Use this following code to enter the game=>
 ```
-ssh bandit6@bandit.labs.overthewire.org -p 2220
+ssh bandit8@bandit.labs.overthewire.org -p 2220
 ```
 <sub>We have to enter ssh following the host and the port which is 2220 to enter the level 2 with bandit2@host -p (port)</sub>
 
