@@ -60,7 +60,7 @@ We will use the commands  `strings` and `grep` to write this statement
 
 `data.txt`: is the file to search in.
 
-`stings` : Extracts readable strings 
+`strings` : Extracts readable strings 
 </sub>
  
 ```
