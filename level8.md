@@ -55,8 +55,8 @@ We will use the find to write this statement
  grep -v -F -x -f <(sort data.txt | uniq -d) data.txt
 
 ```
-<sub>
- `grep`: searches for lines
+
+`grep` : searches for lines
 `-v` :inverts the match, so it shows lines that do not match.
 `-F` :treats the patterns as fixed strings, not regular expressions.
 `-x`:matches whole lines.
@@ -66,7 +66,7 @@ We will use the find to write this statement
 `sort data.txt | uniq -d`:sorts the lines in the "data.txt" file and extracts only the duplicate line.
  `uniq -d`  :  specifies that only duplicate lines should be shown
 `<(...)` is a convenient syntax that allows you to manipulate the output of a command as if it were stored in a file, without the need to create an actual file on the file system.
-</sub>
+
  
 ```
 EN632PlfYiZbn3PhVK3XOGSlNInNE00t
